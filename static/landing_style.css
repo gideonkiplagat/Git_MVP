@@ -1,0 +1,5 @@
+body {
+    background-image: url(/static/topo.svg);
+    background-color: #302e33;
+    font-family: 'Quicksand', sans-serif;
+}

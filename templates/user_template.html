@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?{{ cache_id }}">
+      <link rel="stylesheet" href="../static/src.css">
+      <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+   </head>
+   <body class="bg-inherit text-white">
+      <section class="main">
+               <article class="big-card">
+               {% for repo in user_repo_info %}
+               <article class="card rounded-lg">
+                  <div class="head">
+                     <p class="repo-owner text-xl"><a href= {{ repo.repo_owner_url }}>@{{
+                           repo.repo_owner_name }}</a></p>
+                     {% if repo.topics is defined %}
+                     {% for topic in repo.topics %}
+                     <span class="tag">{{ topic }}</span>
+                     {% endfor %}
+                     {% endif %}
+                  </div>
+                  <div class="main_boi">
+                     <div class="repo-name text-2xl font-extrabold">
+                        <a href= {{ repo.html_url }}> <h2>{{ repo.name }}</h2></a>
+                     </div>
+                     <div class="descrption text-lg">
+                        {{ repo.description }}
+                     </div>
+                  </div>
+                  <div class="toe">
+                     <div class="common rounded-lg border-2 border-white">
+                        <span class="watcher_count">Watchers: {{
+                           repo.subscribers_count }}</span>
+                        <span class="star_count">Stars: {{ repo.stargazers_count
+                           }}</span>
+                        <span class="forks_count">Forks: {{ repo.forks_count }}</span>
+                        {% if repo.license is defined %}
+                        <span class="license_main">{{ repo.license.name }}</span>
+                        {% endif %}
+                     </div>
+                  </div>
+               </div>
+            </article>
+               {% endfor %}
+            </article>
+            <div class="user_info">
+               <img src={{ user_info.avatar_url }} alt="avatar">
+               <span class="username"><a href={{ user_info.html_url }}>@{{
+                     user_info.login }}</a></span>
+               {% if user_info.twitter_username is defined %}
+               <span class="user_twitter"><a href="http://twitter.com/" + {{ user_info.twitter_username }}>@{{
+                  user_info.twitter_username }}</a></span>
+               {% endif %}
+               {% if user_info.followers is undefined %}
+               <span class="followers">Followers: 0</span>
+               {% else %}
+               <span class="followers">Followers: {{ user_info.followers}}</span>
+               {% endif %}
+               {% if user_info.following is undefined %}
+               <span class="following">Following: 0</span>
+               {% else %}
+               <span class="following">Following: {{ user_info.following}}</span>
+               {% endif %}
+            </div>
+      </section>
+   </body>
+</html>
