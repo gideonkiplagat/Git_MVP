@@ -1,8 +1,4 @@
-"""Repo details"""
-
-import storage_engine
-class model():
-    """model object"""
+class Repo:
     def __init__(self, *args, **kwargs):
         """Initialize the model"""
         self.id = 0
@@ -33,17 +29,11 @@ class model():
                 setattr(self, attr, val)
     
     def save(self):
-        """ 
-        save repo attributes in the storage
-        """
-        storage_engine.Storage_Json.new_repo(self, self.user_id)
-        storage_engine.Storage_Json.save_repos()
+        """ save repo attributes in the storage """
+        from storage.storage_engine import StorageEngine
+        StorageEngine.new_repo(self, self.user_id)
+        StorageEngine.save_repos()
 
     def to_dict(self):
         """returns a dictionary containing all keys/values of the instance"""
-        new_dict = self.__dict__.copy()
-        # new_dict["__class__"] = self.__class__.__name__
-        return new_dict
-    
-
-    
+        return self.__dict__.copy()

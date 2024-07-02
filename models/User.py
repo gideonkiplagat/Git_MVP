@@ -1,8 +1,4 @@
-import storage_engine
-
-"""User Object"""
-
-class User():
+class User:
     def __init__(self, *args, **kwargs):
         """initialize user object"""
         self.access_token = ""
@@ -32,21 +28,19 @@ class User():
                 setattr(self, attr, val)
     
     def save(self):
-        """ save user attributes in the storage
-        """
-        storage_engine.Storage_Json.new_user(self)
-        storage_engine.Storage_Json.save_user()
+        """ save user attributes in the storage """
+        from storage.storage_engine import StorageEngine
+        StorageEngine.new_user(self)
+        StorageEngine.save_user()
 
     def save_repos(self, repos=[]):
-        """ save repo objects related to a user
-        """
-        for i in repos:
-            storage_engine.Storage_Json.new_repo(i, self.id)
-        storage_engine.Storage_Json.save_repos()
+        """ save repo objects related to a user """
+        from storage.storage_engine import StorageEngine
+        for repo in repos:
+            StorageEngine.new_repo(repo, self.id)
+        StorageEngine.save_repos()
 
     def to_dict(self):
         """returns a dictionary containing all keys/values of the instance"""
         new_dict = self.__dict__.copy()
-        # new_dict["__class__"] = self.__class__.__name__
         return new_dict
-      
