@@ -4,7 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git-MVP Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* Additional CSS for social links */
+        .social-links {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end; /* Aligns items to the right */
+            gap: 10px;
+            margin-right: 20px; /* Adjust margin for additional spacing */
+        }
+
+        .social-links li {
+            display: inline;
+        }
+
+        .social-links li img {
+            width: 40px; /* Adjust size as needed */
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -24,7 +44,7 @@
     <!-- Introduction Section -->
     <section id="intro" class="section">
         <div class="container">
-            <img src="./MVP starter.jpg" alt="Git-MVP Cover Image" class="cover-image", style="max-width: 100%;">
+            <img src="./MVP starter.jpg" alt="Git-MVP Cover Image" class="cover-image" style="max-width: 200px;">
             <h2>Git-MVP</h2>
             <p>A platform for mastering Git and enhancing your version control workflow.</p>
             <a href="#" class="btn">Visit Git-MVP</a>
@@ -38,9 +58,9 @@
 
             <!-- Feature 1 -->
             <div class="feature">
-                <img src="./mastering.webp" alt="Feature 1 Image" class="feature-image", style="max-width: 100%;">
+                <img src="./mastering.webp" alt="Feature 1 Image" class="feature-image" style="max-width: 200px;">
                 <h3>Interactive Tutorials and Exercises</h3>
-                <p>Providing step-by-step tutorials and interactive exercises that guide users through Git commands, branching strategies, merging, rebasing, and other essential Git functionalities.</p>s
+                <p>Providing step-by-step tutorials and interactive exercises that guide users through Git commands, branching strategies, merging, rebasing, and other essential Git functionalities.</p>
             </div>
 
             <!-- Feature 2 -->
@@ -66,12 +86,12 @@
             <p>Git-MVP (my first portfolio project) was inspired by my journey to master Git and version control tools during my time at ALX School. It started as a personal project to streamline Git workflows and has evolved into a portfolio project showcasing my skills.</p>
             <p>Visit the <a href="https://github.com/gideonkiplagat/Git_MVP" target="_blank">GitHub repository</a> for Git-MVP.</p>
 
-            <!-- Team Members -->
-            <h3>Meet the Team</h3>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/gideon-kiplagat-2669761ba/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com/gideonkiplagat" target="_blank">GitHub</a></li>
-                <li><a href="https://twitter.com/kiplagatTruth" target="_blank">X</a></li>
+            <!-- Social Links -->
+            <h3>Connect with Me</h3>
+            <ul class="social-links">
+                <li><a href="https://www.linkedin.com/in/gideon-kiplagat-2669761ba/" target="_blank"><img src="./linkedIn.png" alt="LinkedIn"></a></li>
+                <li><a href="https://github.com/gideonkiplagat" target="_blank"><img src="./github.png" alt="GitHub"></a></li>
+                <li><a href="https://twitter.com/kiplagatTruth" target="_blank"><img src="./twitter.png" alt="Twitter"></a></li>
             </ul>
         </div>
     </section>

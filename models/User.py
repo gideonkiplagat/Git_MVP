@@ -29,6 +29,7 @@ class User:
     
     def save(self):
         """ save user attributes in the storage """
+        print("HIT")
         from storage.storage_engine import StorageEngine
         StorageEngine.new_user(self)
         StorageEngine.save_user()
