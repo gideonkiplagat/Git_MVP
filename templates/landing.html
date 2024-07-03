@@ -3,70 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Projects</title>
-    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio Projects</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Git-MVP Portfolio</h1>
-            <nav>
-                <ul>
-                    <li><a href="#users">Users</a></li>
-                    <li><a href="#repos">Repositories</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <h1>Users</h1>
 
-    <section id="intro" class="section">
-      <div class="container">
-          <img src="./feature 1.jpeg" alt="Git-MVP Cover Image" class="cover-image" style="max-width: 200px;">
-          <h2>Git-MVP</h2>
-          <p>A platform for mastering Git and enhancing your version control workflow.</p>
-          <a href="http://127.0.0.1:5500/templates/index.html" class="btn">Visit Git-MVP</a>
-      </div>
-  </section>
-    
-    <section id="users" class="section">
-        <div class="container">
-            <h2>Users</h2>
-            <ul>
-                Users Names
-            </ul>
+    <h1>Repos</h1>
 
-            <h2>Add User</h2>
-            <form action="/add_user" method="post">
-                <input type="text" name="id" placeholder="ID" required>
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <button type="submit">Add User</button>
-            </form>
-        </div>
-    </section>
-    
-    <section id="repos" class="section">
-        <div class="container">
-            <h2>Repositories</h2>
-            <ul>
-                    <li>repo Name</li>
-            </ul>
+    <h2>Add User</h2>
+    <form action="/add_user" method="post">
+        <input type="text" name="id" placeholder="ID" required>
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <button type="submit">Add User</button>
+    </form>
 
-            <h2>Add Repo</h2>
-            <form action="/add_repo" method="post">
-                <input type="text" name="id" placeholder="ID" required>
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="text" name="user_id" placeholder="User ID" required>
-                <button type="submit">Add Repo</button>
-            </form>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 My Git-MVP Portfolio </p>
-            <p>GIDEON KIPLAGAT</p>
-        </div>
-    </footer>
+    <h2>Add Repo</h2>
+    <form action="/add_repo" method="post">
+        <input type="text" name="id" placeholder="ID" required>
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="user_id" placeholder="User ID" required>
+        <button type="submit">Add Repo</button>
+    </form>
 </body>
 </html>

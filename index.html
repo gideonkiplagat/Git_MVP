@@ -3,67 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Projects</title>
+    <title>Git-MVP Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* Additional CSS for social links */
+        .social-links {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end; /* Aligns items to the right */
+            gap: 10px;
+            margin-right: 20px; /* Adjust margin for additional spacing */
+        }
+
+        .social-links li {
+            display: inline;
+        }
+
+        .social-links li img {
+            width: 40px; /* Adjust size as needed */
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <h1>Users</h1>
-    <ul>
-        {% for user in users.values() %}
-        <li>{{ user.name }} - {{ user.email }}</li>
-        {% endfor %}
-    </ul>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Git-MVP Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#features">Key Features</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <h1>Repos</h1>
+    <!-- Introduction Section -->
     <section id="intro" class="section">
         <div class="container">
-            <img src="./MVP starter.jpg" alt="Git-MVP Cover Image" class="cover-image" style="max-width: 200px;">
+            <img src="./templates/MVP starter.jpg" alt="Git-MVP Cover Image" class="cover-image" style="max-width: 200px;">
             <h2>Git-MVP</h2>
             <p>A platform for mastering Git and enhancing your version control workflow.</p>
-            <a href="#" class="btn">Visit Git-MVP</a>
+            <a href="http://127.0.0.1:5500/templates/landing.html" class="btn">Visit Git-MVP</a>
         </div>
     </section>
 
+    <!-- Key Features Section -->
     <section id="features" class="section">
         <div class="container">
             <h2>Key Features</h2>
 
             <!-- Feature 1 -->
             <div class="feature">
-                <img src="./mastering.webp" alt="Feature 1 Image" class="feature-image" style="max-width: 200px;">
+                <img src="./templates/mastering.webp" alt="Feature 1 Image" class="feature-image" style="max-width: 200px;">
                 <h3>Interactive Tutorials and Exercises</h3>
                 <p>Providing step-by-step tutorials and interactive exercises that guide users through Git commands, branching strategies, merging, rebasing, and other essential Git functionalities.</p>
             </div>
 
             <!-- Feature 2 -->
             <div class="feature">
-                <img src="./feature 1.jpeg" alt="Feature 2 Image" class="feature-image">
+                <img src="./templates/feature 1.jpeg" alt="Feature 2 Image" class="feature-image">
                 <h3>Visualizations and Simulations</h3>
                 <p>Offering visual representations or simulations of Git processes to help users understand concepts like commit history, branch management, and resolving merge conflicts visually.</p>
             </div>
 
             <!-- Feature 3 -->
             <div class="feature">
-                <img src="./feature 3.png" alt="Feature 3 Image" class="feature-image">
+                <img src="templates/feature 3.png" alt="Feature 3 Image" class="feature-image">
                 <h3>Collaboration and Code Review</h3>
                 <p>Facilitating collaboration among users through features such as pull requests, code reviews, and branch comparisons. This can enhance team workflows and ensure best practices in version control.</p>
             </div>
         </div>
     </section>
 
-    <h2>Add User</h2>
-    <form action="/add_user" method="post">
-        <input type="text" name="id" placeholder="ID" required>
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <button type="submit">Add User</button>
-    </form>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Git-MVP</h2>
+            <p>Git-MVP (my first portfolio project) was inspired by my journey to master Git and version control tools during my time at ALX School. It started as a personal project to streamline Git workflows and has evolved into a portfolio project showcasing my skills.</p>
+            <p>Visit the <a href="https://github.com/gideonkiplagat/Git_MVP" target="_blank">GitHub repository</a> for Git-MVP.</p>
 
-    <h2>Add Repo</h2>
-    <form action="/add_repo" method="post">
-        <input type="text" name="id" placeholder="ID" required>
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="text" name="user_id" placeholder="User ID" required>
-        <button type="submit">Add Repo</button>
-    </form>
+            <!-- Social Links -->
+            <h3>Connect with Me</h3>
+            <ul class="social-links">
+                <li><a href="https://www.linkedin.com/in/gideon-kiplagat-2669761ba/" target="_blank"><img src="templates/linkedIn.png" alt="LinkedIn"></a></li>
+                <li><a href="https://github.com/gideonkiplagat" target="_blank"><img src="templates/github.png" alt="GitHub"></a></li>
+                <li><a href="https://twitter.com/kiplagatTruth" target="_blank"><img src="templates/twitter.png" alt="Twitter"></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Git-MVP Portfolio</p>
+            <p>GIDEON KIPLAGAT - Masterpiece</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
 </body>
 </html>
