@@ -1,1 +1,19 @@
-{"1": {"access_token": "", "id": 1, "login": "", "name": "John Doe", "gravatar_id": "", "avatar_url": "", "email": "john.doe@example.com", "html_url": "", "bio": "", "twitter_username": "", "public_repos": "", "followers": "", "following": "", "user_etag": "", "repo_etag": ""}, "232432": {"access_token": "", "id": 232432, "login": "", "name": "Gideon Kiplagat", "gravatar_id": "", "avatar_url": "", "email": "truthmustache@gmail.com", "html_url": "", "bio": "", "twitter_username": "", "public_repos": "", "followers": "", "following": "", "user_etag": "", "repo_etag": ""}, "12233": {"access_token": "", "id": 12233, "login": "", "name": "vincent Kiptoo", "gravatar_id": "", "avatar_url": "", "email": "vin2@gmail.com", "html_url": "", "bio": "", "twitter_username": "", "public_repos": "", "followers": "", "following": "", "user_etag": "", "repo_etag": ""}, "23422": {"access_token": "", "id": 23422, "login": "", "name": "Ibrahim Fadhili", "gravatar_id": "", "avatar_url": "", "email": "ibrahimkarisa@gmail.com", "html_url": "", "bio": "", "twitter_username": "", "public_repos": "", "followers": "", "following": "", "user_etag": "", "repo_etag": ""}, "1212": {"access_token": "", "id": 1212, "login": "", "name": "asdedw", "gravatar_id": "", "avatar_url": "", "email": "kiplagatgideon00@gmail.com", "html_url": "", "bio": "", "twitter_username": "", "public_repos": "", "followers": "", "following": "", "user_etag": "", "repo_etag": ""}}
+{
+    "1": {
+        "access_token": "",
+        "id": 1,
+        "login": "2024",
+        "name": "",
+        "gravatar_id": "123",
+        "avatar_url": "",
+        "email": "",
+        "html_url": "",
+        "bio": "Always there for the best",
+        "twitter_username": "@truthmustache",
+        "public_repos": "ALx public_repos",
+        "followers": "12",
+        "following": "12",
+        "user_etag": "",
+        "repo_etag": ""
+    }
+}

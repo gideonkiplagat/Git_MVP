@@ -1,0 +1,201 @@
+/* Reset styles and basic setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0; /* Light gray background color */
+    color: #333; /* Default text color */
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #1a202c; /* Darker background for header */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for header */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    position: sticky;
+    color: #211e1e; /* Ensure the title is visible */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px;
+    background-color: #fff; /* White background for sections */
+    margin-bottom: 20px; /* Spacing between sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+section h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    position: sticky;
+    padding-bottom: 5px;
+    color: #333; /* Ensure the titles are visible */
+}
+
+section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #1a202c; /* Bottom border for section titles */
+    position: sticky;
+    padding-bottom: 5px;
+    color: #333; /* Ensure the titles are visible */
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form input,
+form button,
+form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #211e1e;
+    border: 1px solid #0b0a0a;
+    border-radius: 5px;
+    width: 100%; /* Full width form elements */
+}
+
+form button {
+    background-color: #1a202c;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #4a5568; /* Lighter hover effect */
+}
+
+.table-container {
+    overflow-x: auto; /* Horizontal scroll for tables */
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #1a202c;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #e2e8f0; /* Lighter hover effect for table rows */
+}
+
+.social-links {
+    text-align: center; /* Center align social links */
+    margin-top: 20px; /* Add some top margin for spacing */
+}
+
+.social-links li {
+    display: inline-block; /* Display social links in a row */
+    margin: 0 10px; /* Adjust spacing between links */
+}
+
+.social-links li a {
+    display: block; /* Ensure the entire area of the link is clickable */
+}
+
+.social-links li img {
+    width: 40px; /* Adjust the size of the social icons */
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth transform effect */
+}
+
+.social-links li img:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+footer {
+    background-color: #1a202c;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for footer */
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    form input,
+    form button,
+    form textarea {
+        display: block;
+        width: 100%;
+    }
+    .table-container {
+        overflow-x: auto;
+    }
+}
