@@ -62,27 +62,23 @@
                         <th class="px-4 py-2">Repositories</th>
                     </tr>
                 </thead>
-                <tbody>
-                    {% for user in users.values() %}
+                <tbody>                 
                     <tr class="bg-gray-600">
-                        <td class="border px-4 py-2">{{ user.id }}</td>
-                        <td class="border px-4 py-2">{{ user.login }}</td>
-                        <td class="border px-4 py-2">{{ user.name }}</td>
-                        <td class="border px-4 py-2">{{ user.email }}</td>
-                        <td class="border px-4 py-2"><a href="{{ user.html_url }}" target="_blank" class="text-blue-400 hover:underline">{{ user.html_url }}</a></td>
-                        <td class="border px-4 py-2">{{ user.bio }}</td>
-                        <td class="border px-4 py-2"><a href="https://twitter.com/{{ user.twitter_username }}" target="_blank" class="text-blue-400 hover:underline">{{ user.twitter_username }}</a></td>
-                        <td class="border px-4 py-2">{{ user.public_repos }}</td>
-                        <td class="border px-4 py-2">{{ user.followers }}</td>
-                        <td class="border px-4 py-2">{{ user.following }}</td>
+                        <td class="border px-4 py-2"></td>
+                        <td class="border px-4 py-2"></td>
+                        <td class="border px-4 py-2"></td>
+                        <td class="border px-4 py-2"></td>
+                        <td class="border px-4 py-2"><a href="{{ user.html_url }}" target="_blank" class="text-blue-400 hover:underline"></a></td>
+                        <td class="border px-4 py-2"></td>
+                        <td class="border px-4 py-2"><a href="https://twitter.com/{{ user.twitter_username }}" target="_blank" class="text-blue-400 hover:underline"></a></td>
+                        <td class="border px-4 py-2"></td>
+                        <td class="border px-4 py-2"></td>
+                        <td class="border px-4 py-2"></td>
                         <td class="border px-4 py-2"><img src="https://placebear.com/250/250" alt="{{ user.login }}" class="w-12 h-12 rounded-full"></td>
-                        <td class="border px-4 py-2">
-                            {% for repo in user.repositories %}
-                            <a href="{{ repo.html_url }}" target="_blank" class="text-blue-400 hover:underline block">{{ repo.name }}</a>
-                            {% endfor %}
+                        <td class="border px-4 py-2">                         
+                            <a href="{{ repo.html_url }}" target="_blank" class="text-blue-400 hover:underline block"></a>                          
                         </td>
-                    </tr>
-                    {% endfor %}
+                    </tr>                 
                 </tbody>
             </table>
         </div>
